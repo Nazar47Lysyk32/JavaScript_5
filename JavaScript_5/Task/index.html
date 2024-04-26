@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Фільтрація вводу</title>
+</head>
+<body>
+    <label for="username">Введіть ваше ім'я: </label>
+    <input type="text" id="username" oninput="validateInput(this)" placeholder="Тільки літери">
+
+    <script>
+        function validateInput(input) {
+            input.value = input.value.replace(/\d/g, ''); // Видалення усіх цифр
+        }
+    </script>
+</body>
+</html>
